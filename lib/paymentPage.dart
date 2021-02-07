@@ -19,6 +19,14 @@ class PaymentPage extends StatelessWidget {
             Container(
               child: TextField(
                 decoration: InputDecoration(
+                    // enabledBorder: UnderlineInputBorder(
+                    //   borderSide: BorderSide(color: Colors.purple),
+                    // ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.purple),
+                    ),
+                    // border: UnderlineInputBorder(
+                    //     borderSide: BorderSide(color: Colors.purple)),
                     labelStyle: TextStyle(color: Colors.grey),
                     filled: true,
                     fillColor: Colors.grey[300],
