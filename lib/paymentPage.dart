@@ -17,6 +17,7 @@ class PaymentPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              padding: EdgeInsets.only(bottom: 10),
               child: TextField(
                 decoration: InputDecoration(
                     // enabledBorder: UnderlineInputBorder(
@@ -34,13 +35,87 @@ class PaymentPage extends StatelessWidget {
                       Icons.person,
                       color: Colors.grey,
                     ),
-                    labelText: "Card Name"),
+                    labelText: "Card Name",
+                    hoverColor: Colors.purple,
+                    focusColor: Colors.purple),
               ),
             ),
             Container(
+              padding: EdgeInsets.only(bottom: 10),
               child: TextField(
-                decoration: InputDecoration(labelText: "Number"),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    // enabledBorder: UnderlineInputBorder(
+                    //   borderSide: BorderSide(color: Colors.purple),
+                    // ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.purple),
+                    ),
+                    // border: UnderlineInputBorder(
+                    //     borderSide: BorderSide(color: Colors.purple)),
+                    labelStyle: TextStyle(color: Colors.grey),
+                    filled: true,
+                    fillColor: Colors.grey[300],
+                    icon: Icon(
+                      Icons.credit_card,
+                      color: Colors.grey,
+                    ),
+                    labelText: "Number"),
               ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 10),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    // enabledBorder: UnderlineInputBorder(
+                    //   borderSide: BorderSide(color: Colors.purple),
+                    // ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.purple),
+                    ),
+                    // border: UnderlineInputBorder(
+                    //     borderSide: BorderSide(color: Colors.purple)),
+                    labelStyle: TextStyle(color: Colors.grey),
+                    filled: true,
+                    fillColor: Colors.grey[300],
+                    icon: Icon(
+                      Icons.card_membership,
+                      color: Colors.grey,
+                    ),
+                    labelText: "CVV"),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 10),
+              child: TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    // enabledBorder: UnderlineInputBorder(
+                    //   borderSide: BorderSide(color: Colors.purple),
+                    // ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.purple),
+                    ),
+                    // border: UnderlineInputBorder(
+                    //     borderSide: BorderSide(color: Colors.purple)),
+                    labelStyle: TextStyle(color: Colors.grey),
+                    filled: true,
+                    fillColor: Colors.grey[300],
+                    icon: Icon(
+                      Icons.date_range,
+                      color: Colors.grey,
+                    ),
+                    labelText: "Expiry Date"),
+              ),
+            ),
+            FlatButton(
+              onPressed: () {},
+              child: Text(
+                "Pay",
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.blue,
             )
           ],
         ),
