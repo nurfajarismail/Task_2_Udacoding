@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:task_2/customInputExpiry.dart';
+import 'package:task_2/customInputFormatter.dart';
 
 class PaymentPage extends StatelessWidget {
   @override
@@ -43,8 +46,14 @@ class PaymentPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(bottom: 10),
               child: TextField(
+                maxLength: 19,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                  new CustomInputNumber()
+                ],
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
+                    counterText: "",
                     // enabledBorder: UnderlineInputBorder(
                     //   borderSide: BorderSide(color: Colors.purple),
                     // ),
@@ -90,7 +99,13 @@ class PaymentPage extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 10),
               child: TextField(
                 keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                  new CustomInputExpiry()
+                ],
+                maxLength: 5,
                 decoration: InputDecoration(
+                    counterText: "",
                     // enabledBorder: UnderlineInputBorder(
                     //   borderSide: BorderSide(color: Colors.purple),
                     // ),
