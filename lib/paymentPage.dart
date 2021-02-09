@@ -46,7 +46,7 @@ class PaymentPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(bottom: 10),
               child: TextField(
-                maxLength: 19,
+               // maxLength: 19,
                 inputFormatters: [
                   FilteringTextInputFormatter.digitsOnly,
                   new CustomInputNumber()
